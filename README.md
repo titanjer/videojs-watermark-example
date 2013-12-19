@@ -3,4 +3,4 @@
 
 Please refer to [Video.js Watermark](https://github.com/xbgmsharp/videojs-watermark) plugin.
 
-![Screenshot](screenshot.png "Screenshot")
+![Screenshot](image/screenshot.png "Screenshot")
