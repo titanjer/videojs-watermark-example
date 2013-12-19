@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video.js Example with AWS Cloudfront RTMP and Video.js Watermark</title>
+  <link href="//vjs.zencdn.net/4.3/video-js.css" rel="stylesheet">
+  <link href="stylesheet/videojs.watermark.css" rel="stylesheet">
+  <script src="//vjs.zencdn.net/4.3/video.js"></script>
+
+  <script>
+    videojs.options.flash.swf = "http://vjs.zencdn.net/4.3/video-js.swf"
+  </script>
+
+  <script src="javascript/videojs.watermark.js"></script>
+  <style>
+    p {
+      background-color: #eee;
+      border: thin solid #777;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <p>Video.js example with AWS Cloudfront RTMP and Video.js watermark plugin</p>
+
+  <video id='video_1' class='video-js vjs-default-skin' width='640' height='360' preload="auto" controls> 
+    <source src="rtmp://s20pg76wz1wfmq.cloudfront.net/cfx/st&mp4:free-1.mp4" type="rtmp/mp4">
+  </video>
+
+  <script>
+    // initialize video.js
+    var my_video_id = videojs('video_1');
+
+    // Set value to the plugin
+    my_video_id.watermark({
+      file: 'logo.png',
+      xpos: 50,
+      ypos: 50,
+      xrepeat: 0,
+      opacity: 0.1
+    });  
+  </script>
+
+</body>
+</html>
